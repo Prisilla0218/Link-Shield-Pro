@@ -342,9 +342,9 @@
     const BLACKLIST = ["malware.testing.google.test", "bad-phish.example", "phishing.com"];
     const SUSPICIOUS_KEYWORDS = ["login","verify","update","secure","account","confirm","billing","password","reset"];
     const testUrls = {
-      safe: ['https://example.com','http://wikipedia.org','https://github.com'],
-      warning: ['https://httpbin.org/redirect-to?url=http://example.com','https://httpbin.org/status/404'],
-      danger: ['https://malware.testing.google.test/testing/malware/','https://phishing.example.com']
+      safe: ['https://example.com','https://wikipedia.org','https://github.com'],
+      warning: ['http://httpbin.org/redirect-to?url=http://example.com','https://httpbin.org/status/404'],
+      danger: ['http://malware.testing.google.test/testing/malware/','https://phishing.example.com']
     };
 
     function hostnameFromUrl(url){ try { return new URL(url).hostname.toLowerCase(); } catch { return null; } }
